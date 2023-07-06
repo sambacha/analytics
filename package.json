@@ -4,6 +4,16 @@
     "type": "git",
     "url": "git+https://github.com/vercel/analytics.git"
   },
+  "exports": 
+      ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./types/index.d.ts"
+    },
+  "./types/*": {
+  "types": "./types/*.d.ts"
+  },
+},
   "license": "MPL-2.0",
   "scripts": {
     "prepare": "husky install"
